@@ -1,9 +1,11 @@
-:root{
+:root {
   --color-text: #808397;
-  --color-black: #24303E;
-  --color-yellow: #FBD600;
+  --color-black: #24303e;
+  --color-yellow: #fbd600;
+  --color-red: #fe7766;
+  --color-green: #24554a;
+  --orange-text: #164357;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -17,10 +19,10 @@ img {
 }
 html {
   scroll-behavior: smooth;
-  font-family: "Barlow", sans-serif;
 }
-body{
+body {
   margin: 0;
+  font-family: 'Barlow', sans-serif;
 }
 ul {
   list-style: none;
@@ -30,53 +32,50 @@ ul {
   font-size: 1.25rem;
   color: var(--color-text);
 }
-.header{
+.header {
   background-image: url(../assets/images/mobile/image-header.jpg);
-  height: 100vh;
-  padding: 24px;
-  background-size: contain;
+  height: 66vh;
+  padding: 24px 24px 0 24px;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 @media screen and (width>=768px) {
-  .header{
+  .header {
     background-image: url(../assets/images/desktop/image-header.jpg);
   }
 }
-.top-header{
+.top-header {
   display: flex;
   justify-content: space-between;
   padding-block: 8px;
 }
 @media screen and (width>=768px) {
-  .top-header{
+  .top-header {
     padding-block: 34px;
     padding-inline: 46px;
   }
 }
-.title{
+.title {
   position: relative;
-  font-family: "Fraunces", serif;
+  font-family: 'Fraunces', serif;
   font-size: 2.5rem;
   color: white;
-  font-variation-settings:
-  "SOFT" 9;
+  font-variation-settings: 'SOFT' 9;
   letter-spacing: 0.3906rem;
   text-align: center;
   top: 104px;
 }
-.arrow-icon{
+.arrow-icon {
   position: relative;
-  margin-inline:auto;
+  margin-inline: auto;
   top: 106px;
 }
-.button-menu{
-  position: relative;
-  left: 90px;
-  /* por qué tengo que poner left si hay spc-bet?*/
+.button-menu {
+  margin-left: auto;
 }
 
 @media screen and (width>=768px) {
-  .button-menu{
+  .button-menu {
     display: none;
   }
 }
@@ -95,9 +94,8 @@ ul {
   background-color: white;
   text-align: center;
   z-index: 1;
-    /*supongo que esta zindex me sobra, es por cascada?*/
 }
-.menu::after{
+.menu::after {
   position: absolute;
   content: '';
   width: 24px;
@@ -120,11 +118,11 @@ ul {
     left: 410px;
   }
 }
-.menu__item--yellow{
+.menu__item--yellow {
   color: var(--color-black);
   background-color: var(--color-yellow);
   border-radius: 28px;
-  font-family: "Fraunces", serif;
+  font-family: 'Fraunces', serif;
   font-size: 0.9375rem;
   font-weight: 700;
   width: 140px;
@@ -135,15 +133,16 @@ ul {
   padding: 0.8rem 0;
 }
 @media screen and (width>=768px) {
-  .menu__item--yellow{
-  background-color: white;
-  color: var(--color-black);
+  .menu__item--yellow {
+    background-color: white;
+    color: var(--color-black);
   }
 }
 .show {
-  display: flex;}
+  display: flex;
+}
 @media screen and (width>=768px) {
-  .logo{
+  .logo {
     width: 170px;
     height: 33px;
     margin: 12px;
@@ -152,3 +151,104 @@ ul {
 
 /*header acaba */
 
+.subtitle {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-black);
+  font-variation-settings: 'SOFT' 9;
+  letter-spacing: -0.0144rem;
+  text-align: center;
+}
+.text {
+  font-size: 1.125rem;
+  color: var(--color-text);
+  letter-spacing: -0.0081rem;
+  line-height: 30px;
+  text-align: center;
+}
+.learn-button {
+  position: relative;
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-black);
+  font-variation-settings: 'SOFT' 9;
+  letter-spacing: -0.0144rem;
+  isolation: isolate;
+}
+.learn-button::after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 0.625rem;
+  border-radius: 1.75rem;
+  z-index: -1;
+}
+.learn-button--yellow::after {
+  background-color: var(--color-yellow);
+}
+.learn-button--red::after {
+  background-color: var(--color-red);
+}
+.section__container {
+  text-align: center;
+  padding-inline: 24px;
+  padding-block: 64px;
+}
+.cherry-box,
+.orange-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url(../assets/images/mobile/image-graphic-design.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  padding-inline: 24px;
+  padding-bottom: 59px;
+}
+.orange-box {
+  background-image: url(../assets/images/mobile/image-photography.jpg);
+}
+.cherry-box > * {
+  margin: 10px;
+  color: var(--color-green);
+}
+.orange-box > * {
+  margin: 10px;
+  color: var(--orange-text);
+}
+@media screen and (width>=768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 720px);
+    grid-template-rows: repeat(3, 600px);
+  }
+  .egg-box {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .egg-img {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .cup-img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .cup-box {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .cherry-box {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .orange-box {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
