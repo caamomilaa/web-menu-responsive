@@ -1,8 +1,15 @@
+:root{
+  --color-text: #808397;
+  --color-black: #24303E;
+  --color-yellow: #FBD600;
+}
+
 * {
   box-sizing: border-box;
 }
 a {
   color: inherit;
+  text-decoration: none;
 }
 img {
   max-width: 100%;
@@ -10,4 +17,138 @@ img {
 }
 html {
   scroll-behavior: smooth;
+  font-family: "Barlow", sans-serif;
 }
+body{
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+.header{
+  background-image: url(../assets/images/mobile/image-header.jpg);
+  height: 100vh;
+  padding: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (width>=768px) {
+  .header{
+    background-image: url(../assets/images/desktop/image-header.jpg);
+  }
+}
+.top-header{
+  display: flex;
+  justify-content: space-between;
+  padding-block: 8px;
+}
+@media screen and (width>=768px) {
+  .top-header{
+    padding-block: 34px;
+    padding-inline: 46px;
+  }
+}
+.title{
+  position: relative;
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+  color: white;
+  font-variation-settings:
+  "SOFT" 9;
+  letter-spacing: 0.3906rem;
+  text-align: center;
+  top: 104px;
+}
+.arrow-icon{
+  position: relative;
+  margin-inline:auto;
+  top: 106px;
+}
+.button-menu{
+  position: relative;
+  left: 90px;
+  /* por qué tengo que poner left si hay spc-bet?*/
+}
+
+@media screen and (width>=768px) {
+  .button-menu{
+    display: none;
+  }
+}
+.menu {
+  position: absolute;
+  content: '';
+  display: none;
+  flex-direction: column;
+  left: 25px;
+  top: 140px;
+  width: 327px;
+  height: 305px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  background-color: white;
+  text-align: center;
+  z-index: 1;
+    /*supongo que esta zindex me sobra, es por cascada?*/
+}
+.menu::after{
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 24px;
+  top: -24px;
+  right: 0;
+  background-image: linear-gradient(-45deg, white 50%, transparent 50%);
+}
+@media screen and (width>=768px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+    gap: 47px;
+    color: white;
+    justify-content: none;
+    height: 56px;
+    top: 60px;
+    left: 410px;
+  }
+}
+.menu__item--yellow{
+  color: var(--color-black);
+  background-color: var(--color-yellow);
+  border-radius: 28px;
+  font-family: "Fraunces", serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 25px;
+  letter-spacing: -0.11px;
+  padding: 0.8rem 0;
+}
+@media screen and (width>=768px) {
+  .menu__item--yellow{
+  background-color: white;
+  color: var(--color-black);
+  }
+}
+.show {
+  display: flex;}
+@media screen and (width>=768px) {
+  .logo{
+    width: 170px;
+    height: 33px;
+    margin: 12px;
+  }
+}
+
+/*header acaba */
+
