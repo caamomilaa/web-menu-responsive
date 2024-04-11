@@ -9,11 +9,16 @@
 
 ## Descripción 📑
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
+Este ejercicio era hacer una web completa, englobando todos los conocimientos anteriores.
 
 ## ¿Qué he aprendido en este proyecto? 🙇🏻
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
+He aprendido:
+-Organizarme a la hora de poner clases.
+-Reducir líneas de código innecesarias.
+-Usar display: grid y flex.
+-Usar :root para guardar variables.
+-La importancia de nombrar bien los items para no perderse en el código.
 
 ## Tecnologías 🛠
 
@@ -33,11 +38,9 @@ Si quieres echar un vistazo al proyecto, te recomiendo:
 
 ## Autor ✒️
 
-**TU NOMBRE**
+CAMILA VELÁZQUEZ D'AMICO
 
-- [micorreo@midominio.com](micorreo@midominio.com)
-- [LinkedIn](https://www.linkedin.com/in/tu-url-de-linkedin/)
-- [Porfolio web](https://tu-dominio.com/)
+- [c.velazquezdamico@gmail.com](c.velazquezdamico@gmail.com)
 
 ## Instalación
 
